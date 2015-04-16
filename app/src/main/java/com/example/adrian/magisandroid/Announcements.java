@@ -1,43 +1,20 @@
 package com.example.adrian.magisandroid;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-
-public class MainActivity extends ActionBarActivity {
-
-    Button bLogIn = (Button) findViewById(R.id.logIn);
-
-    TextView tUsername = (TextView) findViewById(R.id.username);
-    TextView tPassword = (TextView) findViewById(R.id.password);
-
-    EditText eUsername = (EditText) findViewById(R.id.enterUsername);
-    EditText ePassword = (EditText) findViewById(R.id.enterPassword);
-
-
-
-
+/**
+ * Created by Adrian on 4/12/2015.
+ */
+public class Announcements extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        bLogIn.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent loginIntent = new Intent(getApplicationContext(), Announcements.class);
-                startActivity(loginIntent);
-            }
-        });
+        setContentView(R.layout.announcements);
     }
 
 
@@ -62,6 +39,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 }
